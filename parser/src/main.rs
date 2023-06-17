@@ -173,8 +173,8 @@ fn main() {
 
     println!("lum block : {}, color block : {}, x : {}, y : {}",lum_block,color_block,x,y);
     
-    x = x as u16;
-    y = y as u16;
+    let x = x as u16;
+    let y = y as u16;
     
     // then we decodd
     decode(
