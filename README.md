@@ -12,6 +12,8 @@ Included in this repository:
 - Encoder
 - Decoder
 
+Encoder output file is just.. "output"
+
 ### Build
 ---
 FFMPEG is required to convert the images into YCbCr422 during compression and back when decoding
