@@ -41,3 +41,24 @@ Options:
   -r, --resize <RESIZE> <RESIZE>  resize image by width x height, optional
 
 ```
+
+
+### Compression Algorithm 
+---
+
+- We work with Images work with YUV format
+  - This algorithm uses the YUV422 planar variant 
+
+- First split the images into a specified pixel group (take 8x8 for example)
+- Then, get the minimum and maximum values within the pixel group
+- Subtract the minimum and maximum values, which would be the differences 
+- Check to see if the difference is within the allowed threshold 
+  - Difference < Threshold?
+- If the distance is within the allowed threshold 
+  - Get the average of the pixel group 
+- If not,
+  - Split the pixel group into 4 and rerun the algorithm again
+- There is extra steps taken to further compress
+  - Bit packing the entire image data
+  - Reusing last average values, if determined to be similar 
+
